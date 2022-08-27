@@ -13,23 +13,23 @@ import com.plcoding.core_ui.LocalSpacing
 
 @Composable
 fun ActionButton(
-    text: String,
-    onClick: () -> Unit,
     modifier: Modifier = Modifier,
+    text: String,
     isEnabled: Boolean = true,
-    textStyle: TextStyle = MaterialTheme.typography.button
+    textStyle: TextStyle = MaterialTheme.typography.button,
+    onClick: () -> Unit
 ) {
     Button(
-        onClick = onClick,
         modifier = modifier,
+        onClick = onClick,
         enabled = isEnabled,
         shape = RoundedCornerShape(100.dp)
     ) {
         Text(
+            modifier = Modifier.padding(LocalSpacing.current.spaceSmall),
             text = text,
             style = textStyle,
-            color = MaterialTheme.colors.onPrimary,
-            modifier = Modifier.padding(LocalSpacing.current.spaceSmall)
+            color = MaterialTheme.colors.onPrimary
         )
     }
 }

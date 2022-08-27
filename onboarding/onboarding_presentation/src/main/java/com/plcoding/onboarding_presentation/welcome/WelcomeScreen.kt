@@ -31,9 +31,9 @@ fun WelcomeScreen() {
         )
         Spacer(modifier = Modifier.height(spacing.spaceMedium))
         ActionButton(
+            modifier = Modifier.align(Alignment.CenterHorizontally),
             text = stringResource(id = R.string.next),
-            onClick = { /*TODO*/ },
-            modifier = Modifier.align(Alignment.CenterHorizontally)
+            onClick = { /*TODO*/ }
         )
     }
 }
