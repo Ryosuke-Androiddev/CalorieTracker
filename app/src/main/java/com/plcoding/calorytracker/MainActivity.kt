@@ -24,10 +24,10 @@ class MainActivity : ComponentActivity() {
                     composable(Route.WELCOME) {
                         WelcomeScreen(onNavigate = navController::navigate)
                     }
-                    composable(Route.AGE) {
+                    composable(Route.GENDER) {
 
                     }
-                    composable(Route.GENDER) {
+                    composable(Route.AGE) {
 
                     }
                     composable(Route.HEIGHT) {
