@@ -15,7 +15,7 @@ import com.plcoding.core_ui.LocalSpacing
 
 @Composable
 fun UniteTextField(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     inputValue: String,
     onValueChange: (String) -> Unit,
     unit: String,

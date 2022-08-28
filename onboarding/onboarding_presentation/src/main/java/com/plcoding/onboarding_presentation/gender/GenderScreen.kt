@@ -12,7 +12,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.plcoding.core.domain.model.Gender
-import com.plcoding.core.navigation.Route
 import com.plcoding.core.util.UiEvent
 import com.plcoding.core_ui.LocalSpacing
 import com.plcoding.onboarding_presentation.R
@@ -29,7 +28,7 @@ fun GenderScreen(
     val spacing = LocalSpacing.current
 
     LaunchedEffect(key1 = true) {
-        viewModel.genderPickOneTimeEvent.collect { event ->
+        viewModel.uiEvent.collect { event ->
             when (event) {
                 is UiEvent.Navigate -> {
                     onNavigate(event)
