@@ -26,8 +26,8 @@ class GenderViewModel @Inject constructor(
         private set
 
     // check it is onetime Event
-    private val _genderPickOneTimeEvent = Channel<UiEvent>()
-    val genderPickOneTimeEvent = _genderPickOneTimeEvent.receiveAsFlow()
+    private val _uiEvent = Channel<UiEvent>()
+    val uiEvent = _uiEvent.receiveAsFlow()
 
     // you can only change gender here
     fun onGenderClick(gender: Gender) {
@@ -38,7 +38,7 @@ class GenderViewModel @Inject constructor(
     fun onNextClick() {
         viewModelScope.launch {
             preferences.saveGender(selectedGender)
-            _genderPickOneTimeEvent.send(UiEvent.Navigate(Route.AGE))
+            _uiEvent.send(UiEvent.Navigate(Route.AGE))
         }
     }
 }
