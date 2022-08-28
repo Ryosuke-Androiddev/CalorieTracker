@@ -85,9 +85,7 @@ fun GenderScreen(
         ActionButton(
             modifier = Modifier.align(Alignment.BottomEnd),
             text = stringResource(id = R.string.next),
-            onClick = {
-                onNavigate(UiEvent.Navigate(route = Route.AGE))
-            }
+            onClick = viewModel::onNextClick
         )
     }
 }
